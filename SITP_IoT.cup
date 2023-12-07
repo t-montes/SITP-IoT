@@ -1,11 +1,11 @@
 CupCarbon v. IoT 5.0
 ----------------
 name:SITP_IoT
-zoom:4
-centerposition_la:4.66249278731982
-centerposition_lo:-74.09255862236023
+zoom:5
+centerposition_la:4.665273048222133
+centerposition_lo:-74.0917780995369
 map:0
-display_details:false
+display_details:true
 draw_radio_links:true
 draw_sensor_arrows:true
 radio_links_color:0

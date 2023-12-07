@@ -20,10 +20,17 @@ set currentWait -1
 
 loop 
     if (missing != 0)
-        inc currentWait
-        if (currentWait == n)
-            set currentWait 0
+        // set currentWait to the next zero in nRoutes
+        set i 0
+        while (i < n)
+            vget x nRoutes i
+            if (x == 0)
+                set currentWait i
+                set i n
+            end
+            inc i
         end
+
         vget nI nIds currentWait
         cprint "Waiting for " nI
         send discoverReqMsg nI
@@ -60,4 +67,4 @@ loop
         send discoverResMsg msgId
     end
 
-    delay 500
+    delay 200
